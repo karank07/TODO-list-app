@@ -1,36 +1,69 @@
 import React, { useState } from 'react';
-import { View, TextInput, Button, StyleSheet } from 'react-native';
+import { View, TextInput, Button, StyleSheet, Modal } from 'react-native';
+
 
 const goalInput = props => {
     const [newGoal, setNewGoal] = useState('');
     const inputGoalHandler = input => setNewGoal(input);
-
+    const addGoalHandler = () => {
+        props.goalAdd(newGoal);
+        setNewGoal('');
+    };
     return (
-        <View style={styles.inputView}>
-            <TextInput
-                placeholder="New Goal"
-                style={styles.inputText}
-                onChangeText={inputGoalHandler}
-                value={newGoal} />
-            <Button
-                title='ADD'
-                onPress={props.goalAdd.bind(this, newGoal)} />
-        </View>
+        <Modal visible={props.visible} animationType="slide">
+            <View style={styles.inputView}>
+                <TextInput
+                    placeholder="New Goal"
+                    style={styles.inputText}
+                    onChangeText={inputGoalHandler}
+                    value={newGoal} />
+                <View style={styles.buttonLayout}>
+                    <View style={styles.button}>
+                        <Button
+                            title="CANCEL"
+                            color="red"
+                            onPress={props.onCancel}
+                        />
+                    </View>
+
+                    <View style={styles.button}>
+                        <Button
+                            title="ADD"
+                            onPress={addGoalHandler}
+                        />
+                    </View>
+
+
+                </View>
+
+            </View>
+        </Modal>
+
     );
 
 };
 const styles = StyleSheet.create(
     {
         inputView: {
-            flexDirection: 'row',
+            flex: 1,
             alignItems: 'center',
-            justifyContent: 'space-between'
+            justifyContent: "center"
+
         },
         inputText: {
-            borderBottomColor: 'black',
-            borderBottomWidth: 1,
+            borderColor: 'black',
+            borderWidth: 1,
             padding: 5,
-            width: '80%'
+            width: '80%',
+            marginBottom: 10
+        },
+        buttonLayout: {
+            flexDirection: 'row-reverse',
+            justifyContent: "space-between",
+            width: '60%'
+        },
+        button:{
+            width:'40%'
         }
     }
 )
