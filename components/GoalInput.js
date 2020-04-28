@@ -5,7 +5,11 @@ import { View, TextInput, Button, StyleSheet, Modal } from 'react-native';
 const goalInput = props => {
     const [newGoal, setNewGoal] = useState('');
     const inputGoalHandler = input => setNewGoal(input);
+
+
     const addGoalHandler = () => {
+        if (newGoal.length == 0)
+            return;
         props.goalAdd(newGoal);
         setNewGoal('');
     };
@@ -62,8 +66,8 @@ const styles = StyleSheet.create(
             justifyContent: "space-between",
             width: '60%'
         },
-        button:{
-            width:'40%'
+        button: {
+            width: '40%'
         }
     }
 )

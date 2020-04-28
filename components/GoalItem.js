@@ -5,7 +5,7 @@ const goalItem = props => {
     return (
         <TouchableOpacity activeOpacity={0.8} onPress={props.onDelete.bind(this, props.goalID)}>
             <View style={styles.list}>
-                <Text style={{color:'white'}}>{props.goalName}</Text>
+                <Text >{props.goalName}</Text>
             </View>
         </TouchableOpacity>
     );
