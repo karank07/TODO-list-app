@@ -15,8 +15,8 @@ const styles = StyleSheet.create(
         list: {
             padding: 10,
             marginVertical: 10,
-            backgroundColor: '#00bfff',
-            borderWidth: 1
+            borderBottomWidth: 1,
+            borderColor: '#ccc'
         }
     }
 );

@@ -51,7 +51,8 @@ const styles = StyleSheet.create(
         inputView: {
             flex: 1,
             alignItems: 'center',
-            justifyContent: "center"
+            justifyContent: "center",
+            
 
         },
         inputText: {
@@ -59,7 +60,8 @@ const styles = StyleSheet.create(
             borderWidth: 1,
             padding: 5,
             width: '80%',
-            marginBottom: 10
+            marginBottom: 10,
+            borderRadius: 15
         },
         buttonLayout: {
             flexDirection: 'row-reverse',
