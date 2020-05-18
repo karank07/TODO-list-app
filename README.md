@@ -11,6 +11,13 @@ This project was created to practice basic concepts of building a React Native a
 
 ## App Preview
 
+<p>
+<img width="190" height="390" src="https://github.com/karank07/goal-checker-app/blob/master/screen1.png" >
+<img width="190" height="390" src="https://github.com/karank07/goal-checker-app/blob/master/screen4.png" >
+<img width="190" height="390" src="https://github.com/karank07/goal-checker-app/blob/master/screen2.png" >
+<img width="190" height="390" src="https://github.com/karank07/goal-checker-app/blob/master/screen3.png" >
+</p>
+
 #
 
 [React Native](https://github.com/facebook/react-native)
